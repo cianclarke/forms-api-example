@@ -26,6 +26,7 @@ app.use(mbaasExpress.fhmiddleware());
 
 // fhlint-begin: custom-routes
 app.use('/hello', require('./lib/hello.js')());
+app.use('/submissions', require('./lib/submissions'));
 // fhlint-end
 
 // Important that this is last!
