@@ -30,7 +30,8 @@
   "scripts": {
     "test": "grunt test",
     "debug": "grunt serve",
-    "start": "node application.js"
+    "start": "node application.js",
+    "postinstall": "cp -rf node_modules/datatables/ public/datatables"
   },
   "license": "mit"
 }

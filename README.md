@@ -2,24 +2,20 @@
 
 This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for building your APIs. 
 
-# Group Hello World API
+# Group Forms Exporter API
 
-# hello [/hello]
+# submissions [/submissions]
 
-'Hello world' endpoint.
+'Submissions' endpoint.
 
-## hello [POST] 
+## submissions [GET] 
 
-'Hello world' endpoint.
+'Submissions' endpoint.
 
 + Request (application/json)
-    + Body
-            {
-              "hello": "world"
-            }
 
 + Response 200 (application/json)
     + Body
-            {
-              "msg": "Hello world"
-            }
+            [
+              {}, {}, {}
+            ]

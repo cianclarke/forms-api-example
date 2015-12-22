@@ -1,1 +1,44 @@
-Your Node.js code is deployed and running. This file is served statically from public/index.html.
+<html>
+  <head>
+    <script src="/datatables/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/datatables/media/js/jquery.dataTables.js"></script>
+    <script>
+$(function(){
+  $('table').DataTable({
+    ajax: '/submissions',
+    // tell datatables to expect an array in the API response
+    sAjaxDataProp : "",
+    "aoColumns" : [ 
+      {
+        "sTitle" : "Time Submitted",
+        "mData" : "deviceFormTimestamp"
+      },
+      {
+        "sTitle" : "Device unique ID",
+        "mData" : "deviceId"
+      },
+      {
+        "sTitle" : "Form Name",
+        "mData" : "formName"
+      }
+      // more fields can be drawn here to make a table
+    ]
+
+  });  
+});
+    </script>
+    <link rel="stylesheet" type="text/css" href="/datatables/media/css/jquery.dataTables.min.css">
+  </head>
+  <body>
+    <h1>Simple Forms Data Viewer</h1>
+      <table>
+        <thead>
+          <tr>
+              <th>Time Submitted</th>
+              <th>Device UUID</th>
+              <th>Form Name</th>
+          </tr>
+        </thead>
+      </table>
+  </body>
+</html>
